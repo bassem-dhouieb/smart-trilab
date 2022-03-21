@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="775.0" prefWidth="1140.0" style="-fx-background-radius: 25;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smart_trilab.ClientsController">
+    <children>
+        <VBox layoutX="-2.0" layoutY="-2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="775.0" prefWidth="1140.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+            <children>
+            <GridPane prefHeight="256.0" prefWidth="1121.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="124.0" styleClass="addBtn" stylesheets="@css/style.css" text="add client" textFill="WHITE" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="8" GridPane.rowSpan="2">
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                            </Button>
+                            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="95.0" styleClass="ClearBtn" stylesheets="@css/style.css" text="clear" textFill="WHITE" GridPane.columnIndex="10" GridPane.rowIndex="8" GridPane.rowSpan="2" />
+                          <Label prefHeight="40.0" prefWidth="249.0" styleClass="big-label" text="Personel informations :" textFill="#151d3b" GridPane.columnSpan="3" GridPane.rowSpan="2">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="DIN Condensed Bold" size="30.0" />
+                     </font>
+                  </Label>
+                          <Label prefHeight="17.0" prefWidth="159.0" styleClass="small-label" text="Society :" textFill="#d82148" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                          </Label>
+                          <TextField prefHeight="50.0" prefWidth="50.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                          <TextField prefHeight="50.0" prefWidth="100.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                          <TextField prefHeight="26.0" prefWidth="166.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="9" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                          </TextField>
+                          <ComboBox prefHeight="25.0" prefWidth="163.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="10" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                          <TextField prefHeight="26.0" prefWidth="220.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="50.0" right="45.0" />
+                     </GridPane.margin>
+                          </TextField>
+                          <TextField prefHeight="50.0" prefWidth="100.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                          <TextField prefHeight="50.0" prefWidth="100.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                          <TextField prefHeight="50.0" prefWidth="100.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                          <TextField prefHeight="50.0" prefWidth="100.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                  <Label prefHeight="17.0" prefWidth="159.0" styleClass="small-label" text="Full name :" textFill="#d82148" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="159.0" styleClass="small-label" text="Country :" textFill="#d82148" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="159.0" styleClass="small-label" text="Address :" textFill="#d82148" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="22.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="159.0" styleClass="small-label" text="Email :" textFill="#d82148" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="39.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="31.0" prefWidth="48.0" styleClass="small-label" text="Tel :" textFill="#d82148" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="159.0" styleClass="small-label" text="Fax :" textFill="#d82148" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="60.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="40.0" prefWidth="223.0" styleClass="big-label" text="Legal information :" textFill="#151d3b" GridPane.columnSpan="3" GridPane.rowIndex="5" GridPane.rowSpan="2">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="30.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="31.0" prefWidth="208.0" styleClass="small-label" text="Tax id :" textFill="#d82148" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="31.0" prefWidth="208.0" styleClass="small-label" text="Trade register :" textFill="#d82148" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="60.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="507.0" prefWidth="1140.0">
+                    <children>
+                        <TableView prefHeight="393.0" prefWidth="1100.0">
+                            <columns>
+                                <TableColumn prefWidth="101.0" text="reference" />
+                                <TableColumn prefWidth="130.0" text="socity" />
+                        <TableColumn prefWidth="130.0" text="tax id" />
+                        <TableColumn prefWidth="123.0" text="trade register" />
+                                <TableColumn minWidth="0.0" prefWidth="141.0" text="full name" />
+                                <TableColumn prefWidth="163.0" text="email" />
+                                <TableColumn minWidth="0.0" prefWidth="134.0" text="tel" />
+                                <TableColumn prefWidth="106.0" text="fax" />
+                        <TableColumn prefWidth="70.0" text="fnct" />
+                            </columns>
+                            <HBox.margin>
+                                <Insets bottom="20.0" left="20.0" right="20.0" />
+                            </HBox.margin>
+                        </TableView>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
