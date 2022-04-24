@@ -1,52 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.LineChart?>
-<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="733.0" prefWidth="933.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smart_trilab.DepotController">
-   <children>
-      <VBox layoutX="-2.0" layoutY="-2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="775.0" prefWidth="1140.0" style="-fx-background-color: white; -fx-background-radius: 25;">
-         <children>
-            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="365.0" prefWidth="940.0">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="775.0" prefWidth="1140.0" style="-fx-background-radius: 25;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smart_trilab.DepotController">
+    <children>
+        <VBox layoutX="-2.0" layoutY="-2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="775.0" prefWidth="1140.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+            <children>
+            <GridPane prefHeight="280.0" prefWidth="1147.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
                <children>
-                  <VBox prefHeight="350.0" prefWidth="450.0">
+                            <Button fx:id="add_btn" mnemonicParsing="false" onAction="#addMaterial" prefHeight="40.0" prefWidth="139.0" styleClass="addBtn" stylesheets="@css/style.css" text="add material" textFill="WHITE" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="5" GridPane.rowSpan="2">
+                     <GridPane.margin>
+                        <Insets left="35.0" />
+                     </GridPane.margin>
+                            </Button>
+                            <Button fx:id="update_btn" mnemonicParsing="false" onAction="#update" prefHeight="26.0" prefWidth="95.0" styleClass="UpdateBtn" stylesheets="@css/style.css" text="update" textFill="WHITE" GridPane.columnIndex="9" GridPane.rowIndex="5" GridPane.rowSpan="2" />
+                          <Label prefHeight="40.0" prefWidth="249.0" styleClass="big-label" text="Product informations :" textFill="#151d3b" GridPane.columnSpan="3" GridPane.rowSpan="2">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="DIN Condensed Bold" size="30.0" />
+                     </font>
+                  </Label>
+                          <Label prefHeight="17.0" prefWidth="159.0" styleClass="small-label" text="Name :" textFill="#d82148" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="40.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                          </Label>
+                          <TextField fx:id="name_field" prefHeight="50.0" prefWidth="100.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                          <ComboBox fx:id="supplier_box" prefHeight="25.0" prefWidth="163.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="10" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                          <TextField fx:id="color_field" prefHeight="50.0" prefWidth="100.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <Label prefHeight="17.0" prefWidth="159.0" styleClass="small-label" text="Color :" textFill="#d82148" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="45.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="159.0" styleClass="small-label" text="Supplier :" textFill="#d82148" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="159.0" styleClass="small-label" text="Type :" textFill="#d82148" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="45.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="clear_btn" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="95.0" styleClass="ClearBtn" stylesheets="@css/style.css" text="clear" textFill="WHITE" GridPane.columnIndex="10" GridPane.columnSpan="2" GridPane.rowIndex="5" GridPane.rowSpan="2">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <ImageView fx:id="delete_btn" fitHeight="46.0" fitWidth="53.0" onMouseClicked="#delete" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="11" GridPane.rowIndex="5" GridPane.rowSpan="2">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                     <image>
+                        <Image url="@images/trash.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="search_field" prefHeight="50.0" prefWidth="100.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="8" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+                  <Label prefHeight="31.0" prefWidth="208.0" styleClass="small-label" text="Search :" textFill="#d82148" GridPane.columnIndex="7" GridPane.rowIndex="9">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ImageView fx:id="material_image" fitHeight="134.0" fitWidth="191.0" onMouseClicked="#browse_image" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" GridPane.rowSpan="4">
+                     <image>
+                        <Image url="@images/add-image.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="17.0" prefWidth="159.0" styleClass="small-label" text="Quantity :" textFill="#d82148" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="22.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="quantity_field" prefHeight="50.0" prefWidth="100.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <Label fx:id="total_quantity" alignment="CENTER" prefHeight="40.0" prefWidth="249.0" styleClass="big-label" text="0" textAlignment="CENTER" textFill="#151d3b" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
                      <children>
-                        <Label alignment="CENTER" prefHeight="78.0" prefWidth="226.0" text="depot :" />
-                        <LineChart prefHeight="341.0" prefWidth="437.0">
-                          <xAxis>
-                            <CategoryAxis side="BOTTOM" />
-                          </xAxis>
-                          <yAxis>
-                            <NumberAxis side="LEFT" />
-                          </yAxis>
-                        </LineChart>
+                        <ImageView fx:id="up_arrow" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#add_quantity" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/triangular-filled-up-arrow.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="down_arrow" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#reduce_quantity" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/triangular-filled-down-arrow.png" />
+                           </image>
+                        </ImageView>
                      </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                   </VBox>
-                  <VBox prefHeight="350.0" prefWidth="450.0">
-                     <children>
-                        <Label prefHeight="78.0" prefWidth="226.0" text="total income:" />
-                        <Label prefHeight="78.0" prefWidth="226.0" text="1000 dt" />
-                     </children>
-                  </VBox>
+                  <ComboBox fx:id="type_box" prefHeight="25.0" prefWidth="163.0" styleClass="text-field" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
                </children>
-            </HBox>
-            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="365.0" prefWidth="940.0">
-               <children>
-                  <Label prefHeight="18.0" prefWidth="120.0" text="Label" />
-                  <ListView prefHeight="283.0" prefWidth="686.0">
-                     <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin></ListView>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </children>
+            </GridPane>
+                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="507.0" prefWidth="1140.0">
+                    <children>
+                        <TableView fx:id="material_table" prefHeight="393.0" prefWidth="1100.0">
+                            <columns>
+                                <TableColumn fx:id="image_col" prefWidth="179.0" text="image" />
+                                <TableColumn fx:id="reference_col" prefWidth="157.0" text="reference" />
+                                <TableColumn fx:id="name_col" minWidth="0.0" prefWidth="139.0" text="name" />
+                                <TableColumn fx:id="type_col" prefWidth="143.0" text="type" />
+                        <TableColumn fx:id="color_col" prefWidth="128.0" text="color" />
+                                <TableColumn fx:id="supplier_col" minWidth="0.0" prefWidth="191.0" text="supplier" />
+                        <TableColumn fx:id="quantity_col" prefWidth="175.0" text="quantity" />
+                            </columns>
+                            <HBox.margin>
+                                <Insets bottom="20.0" left="20.0" right="20.0" />
+                            </HBox.margin>
+                        </TableView>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
 </AnchorPane>

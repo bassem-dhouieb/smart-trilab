@@ -30,7 +30,7 @@ public class Controller implements Initializable {
     @FXML
     private Label localTime;
 
-    private volatile boolean stop = false;
+    private final boolean stop = false;
 
     @FXML
     private Button dashboard;

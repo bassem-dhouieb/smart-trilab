@@ -1,63 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.LineChart?>
-<?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="775.0" prefWidth="1140.0" style="-fx-background-radius: 25;" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smart_trilab.DashboardController">
-   <children>
-      <VBox layoutX="-2.0" layoutY="-2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="775.0" prefWidth="1140.0" style="-fx-background-color: white; -fx-background-radius: 25;">
-         <children>
-            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="387.0" prefWidth="1140.0">
+    <children>
+        <VBox layoutX="-2.0" layoutY="-2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="775.0" prefWidth="1140.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+            <children>
+            <GridPane prefHeight="280.0" prefWidth="1147.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
                <children>
-                  <VBox prefHeight="387.0" prefWidth="455.0">
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="square" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="8">
                      <children>
-                        <Label alignment="CENTER" prefHeight="78.0" prefWidth="226.0" styleClass="big-label" text="Total selled product :">
-                           <VBox.margin>
-                              <Insets left="10.0" />
-                           </VBox.margin></Label>
-                        <LineChart prefHeight="341.0" prefWidth="437.0" styleClass="text-field" stylesheets="@css/style.css">
-                          <xAxis>
-                            <CategoryAxis side="BOTTOM" />
-                          </xAxis>
-                          <yAxis>
-                            <NumberAxis side="LEFT" />
-                          </yAxis>
-                           <VBox.margin>
-                              <Insets left="20.0" />
-                           </VBox.margin>
-                        </LineChart>
+                                <Label prefHeight="40.0" prefWidth="249.0" styleClass="big-label" text="Total Suppliers :" textFill="#151d3b">
+                           <font>
+                              <Font name="DIN Condensed Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="114.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/hotel-supplier.png" />
+                                 </image>
+                              </ImageView>
+                                      <Label fx:id="total_suppliers" alignment="CENTER" prefHeight="31.0" prefWidth="119.0" text="0" textFill="#151d3b">
+                                 <font>
+                                    <Font name="DIN Condensed Bold" size="35.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="30.0" />
+                                 </HBox.margin>
+                                      </Label>
+                           </children>
+                        </HBox>
                      </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
                   </VBox>
-                  <VBox prefHeight="350.0" prefWidth="450.0">
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="square" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="8">
                      <children>
-                        <Label prefHeight="78.0" prefWidth="226.0" text="total income:" />
-                        <Label prefHeight="78.0" prefWidth="226.0" text="1000 dt" />
-                        <PieChart startAngle="31.0" />
+                        <Label prefHeight="40.0" prefWidth="249.0" styleClass="big-label" text="Total Clients :" textFill="#151d3b">
+                           <font>
+                              <Font name="DIN Condensed Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="230.0">
+                           <children>
+                              <ImageView fitHeight="114.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/team.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="total_clients" alignment="CENTER" prefHeight="31.0" prefWidth="119.0" text="0" textFill="#151d3b">
+                                 <font>
+                                    <Font name="DIN Condensed Bold" size="35.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
                      </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
                   </VBox>
                </children>
-            </HBox>
-            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="365.0" prefWidth="940.0">
-               <children>
-                  <Label prefHeight="18.0" prefWidth="120.0" text="Label" />
-                  <ListView prefHeight="283.0" prefWidth="686.0">
+            </GridPane>
+                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="507.0" prefWidth="1140.0">
+                    <children>
+                  <Label prefHeight="40.0" prefWidth="168.0" styleClass="big-label" text="Depot Warnings :" textFill="#151d3b">
+                     <font>
+                        <Font name="DIN Condensed Bold" size="30.0" />
+                     </font>
                      <HBox.margin>
-                        <Insets right="20.0" />
-                     </HBox.margin></ListView>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </children>
-   <padding>
-      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
-   </padding>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                        <TableView fx:id="material_table" prefHeight="481.0" prefWidth="913.0">
+                            <columns>
+                                <TableColumn fx:id="image_col" prefWidth="179.0" text="image" />
+                                <TableColumn fx:id="reference_col" prefWidth="157.0" text="reference" />
+                                <TableColumn fx:id="name_col" minWidth="0.0" prefWidth="139.0" text="name" />
+                                <TableColumn fx:id="type_col" prefWidth="143.0" text="type" />
+                        <TableColumn fx:id="color_col" prefWidth="128.0" text="color" />
+                        <TableColumn fx:id="quantity_col" prefWidth="175.0" text="quantity" />
+                            </columns>
+                            <HBox.margin>
+                                <Insets bottom="20.0" left="20.0" right="20.0" />
+                            </HBox.margin>
+                        </TableView>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
 </AnchorPane>
